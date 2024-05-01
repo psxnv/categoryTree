@@ -1,28 +1,30 @@
 import React from 'react';
-import styles from './ItemList.scss'
+import styles from './ItemList.module.scss'
 
+import minus from '../icons/coolicon.svg'
+import plus from '../icons/plus.svg'
 
-const Item = ({ item: { name, subItems = null } }) => {
+const Item = ({ item: { title, subCategories = null } }) => {
     const [showSubItems, setShowSubItems] = React.useState(false);
 
     return (
         <div className={styles.itemWrapper}>
             <div className={styles.item}>
-                {subItems && (
+                {subCategories && (
                     <button className={styles.itemButton}
                         onClick={() => setShowSubItems(!showSubItems)}>
-                        {/* {showSubItems ? <img className={styles.icon} src={minus} alt="минус" /> : <img className={styles.icon} src={plus} alt="плюс" />} */}
-                        {showSubItems ? '-' : '+' }
+                        {showSubItems ? <img className={styles.icon} src={minus} alt="минус" /> : <img className={styles.icon} src={plus} alt="плюс" />}
+                        {/* {showSubItems ? '-' : '+' } */}
                     </button>
                 )}
                 <span
                     className={styles.name}
                     onDoubleClick={() => setShowSubItems(!showSubItems)}
                 >
-                    {name}
+                    {title}
                 </span>
             </div>
-            {showSubItems && <ItemsList list={subItems} />}
+            {showSubItems && <ItemsList list={subCategories} />}
         </div>
 
     );

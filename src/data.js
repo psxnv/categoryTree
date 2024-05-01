@@ -1,57 +1,82 @@
 export const data = [
   {
     id: 1,
-    name: "автомобили",
-    subItems: [
-      { id: 11, name: "файл" },
-      { id: 12, name: "файл" },
-      { id: 13, name: "файл" },
-      { id: 14, name: "файл" },
+    title: "Автомобили",
+    subCategories: [
       {
-        id: 15,
-        name: "папка",
-        subItems: [
-          { id: 111, name: "файл" },
-          { id: 112, name: "файл",
-          subItems: [
-            { id: 113, name: "файл" },
-            { id: 113, name: "файл" },
-            { id: 113, name: "файл" },
-          ],
-        },
-          { id: 113, name: "файл" },
+        id: 111,
+        title: "BMW",
+        parentId: 1111,
+        subCategories: [
           {
-            id: 111,
-            name: "папка",
-            subItems: [
-              { id: 113, name: "файл" },
-              { id: 113, name: "файл" },
-              { id: 113, name: "файл", 
-              subItems: [
-                { id: 113, name: "файл" },
-                { id: 113, name: "файл" },
-                { id: 113, name: "файл" },
-              ],
-            },
-
-            ],
+            id: 222,
+            title: "5-series",
+            parentId: 2221,
+          },
+          {
+            id: 222,
+            title: "5-series",
+            parentId: 2220,
+          },
+        ],
+      },
+      {
+        id: 112,
+        title: "Mersedes",
+        parentId: 1111,
+        subCategories: [
+          {
+            id: 222,
+            title: "A-class",
+            parentId: 2222,
+          },
+          {
+            id: 222,
+            title: "S-class",
+            parentId: 2223,
           },
         ],
       },
     ],
   },
-  { id: 2, name: "файл"},
-  { id: 3, name: "файл"},
-  { id: 4, name: "файл"},
-  { 
-    id: 5, 
-    name: "папка",
-    subItems: [
-        { id: 211, name: "файл" },
-        { id: 222, name: "файл" },
-        { id: 233, name: "файл" },
-        { id: 244, name: "файл" },
-    ]
-},
+  {
+    id: 2,
+    title: "Мотоциклы",
+    subCategories: [
+      {
+        id: 112,
+        title: "Honda",
+        parentId: 1112,
+        subCategories: [
+          {
+            id: 223,
+            title: "600-cubs",
+            parentId: 2224,
+          },
+          {
+            id: 224,
+            title: "500-cubs",
+            parentId: 2225,
+          },
+        ],
+      },
+      {
+        id: 113,
+        title: "Suzuki",
+        parentId: 1113,
+        subCategories : [
+          {
+            id : 225,
+            title: "1000-cubs",
+            parentId: 2224
+          },
+          {
+            id : 226,
+            title: "800-cubs",
+            parentId: 2225,
+          },
+        ],
+      }
+    ],
+  },
 ];
-

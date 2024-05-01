@@ -1,0 +1,27 @@
+
+  .item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .itemButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; 
+  }
+  
+  .icon {
+    width: 20px; 
+    height: 20px;
+    margin-right: 5px; 
+  }
+  
+  .name {
+    cursor: pointer;
+  }
+  
+  .itemsList {
+    margin-left: 10px; 
+  }
+  
