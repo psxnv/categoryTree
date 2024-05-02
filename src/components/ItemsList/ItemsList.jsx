@@ -10,13 +10,14 @@ const Item = ({ item: { title, subCategories = null } }) => {
     return (
         <div className={styles.itemWrapper}>
             <div className={styles.item}>
+
                 {subCategories && (
                     <button className={styles.itemButton}
                         onClick={() => setShowSubItems(!showSubItems)}>
                         {showSubItems ? <img className={styles.icon} src={minus} alt="минус" /> : <img className={styles.icon} src={plus} alt="плюс" />}
-                        {/* {showSubItems ? '-' : '+' } */}
                     </button>
                 )}
+                
                 <span
                     className={styles.name}
                     onDoubleClick={() => setShowSubItems(!showSubItems)}
@@ -32,7 +33,7 @@ const Item = ({ item: { title, subCategories = null } }) => {
 
 const ItemsList = ({ list = [] }) => {
 
-    if(!list?.length) {
+    if (!list?.length) {
         return null
     }
 
