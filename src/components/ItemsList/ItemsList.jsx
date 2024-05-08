@@ -12,9 +12,12 @@ const Item = ({ item: { title, subCategories = null } }) => {
             <div className={styles.item}>
 
                 {subCategories && (
-                    <button className={styles.itemButton}
+                    <button 
+                        className={styles.itemButton}
                         onClick={() => setShowSubItems(!showSubItems)}>
+
                         {showSubItems ? <img className={styles.icon} src={minus} alt="минус" /> : <img className={styles.icon} src={plus} alt="плюс" />}
+
                     </button>
                 )}
                 

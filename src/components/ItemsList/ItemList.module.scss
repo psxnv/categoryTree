@@ -1,27 +1,41 @@
+.itemWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(66, 66, 66);
 
   .item {
     display: flex;
     align-items: center;
+    padding: 5px;
+
+    .itemButton {
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .name {
+      flex-grow: 1;
+      cursor: pointer;
+    }
   }
-  
-  .itemButton {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px; 
-  }
-  
-  .icon {
-    width: 20px; 
-    height: 20px;
-    margin-right: 5px; 
-  }
-  
-  .name {
-    cursor: pointer;
-  }
-  
+
   .itemsList {
-    margin-left: 10px; 
+    margin-left: 30px;
+   
   }
-  
+}
+
+.itemsList{
+  min-width: 10%;
+  max-width: 15%;
+  border-radius: 10px;
+  background-color: rgb(166, 166, 191);
+}
